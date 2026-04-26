@@ -1,0 +1,188 @@
+/* ---- Portrait ---- */
+
+.agence-portrait {
+  background: var(--bg);
+}
+
+.agence-portrait-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.agence-portrait-text .section-title em {
+  font-style: italic;
+  color: var(--stone);
+}
+
+.agence-body {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-soft);
+  margin: 0 0 20px;
+}
+
+/* ---- Valeurs ---- */
+
+.agence-valeurs {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+.agence-valeurs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-left: 1px solid var(--line);
+}
+
+.agence-valeur {
+  padding: 36px 28px;
+  border-right: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.agence-valeur-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--line);
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.agence-valeur-titre {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.agence-valeur-texte {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---- Prestations ---- */
+
+.agence-prestations {
+  background: var(--bg);
+}
+
+.agence-prest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.agence-prest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.agence-prest-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+.agence-prest-num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--stone);
+  min-width: 24px;
+}
+
+/* ---- Coordonnées ---- */
+
+.agence-coords {
+  background: var(--bg-soft, var(--surface));
+  border-top: 1px solid var(--line);
+}
+
+.agence-coords-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.agence-coords-info {
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+.agence-address {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+
+.agence-address strong {
+  display: block;
+  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.agence-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.agence-contacts a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.agence-contacts a:hover { color: var(--text); }
+
+.agence-map {
+  height: 100%;
+  min-height: 280px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 900px) {
+  .agence-portrait-grid { grid-template-columns: 1fr; gap: 40px; }
+  .agence-portrait-img { height: 300px !important; }
+  .agence-valeurs-grid { grid-template-columns: repeat(2, 1fr); }
+  .agence-prest-grid { grid-template-columns: 1fr; gap: 40px; }
+  .agence-coords-inner { grid-template-columns: 1fr; }
+  .agence-map { min-height: 220px; }
+}
+
+@media (max-width: 600px) {
+  .agence-valeurs-grid { grid-template-columns: 1fr; }
+  .agence-coords-info { padding: 28px 24px; }
+}

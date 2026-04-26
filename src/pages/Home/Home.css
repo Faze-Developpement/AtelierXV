@@ -1,0 +1,253 @@
+/* ---- Hero ---- */
+
+.home-hero {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.home-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.home-hero .eyebrow {
+  margin-bottom: 20px;
+}
+
+.home-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6vw, 80px);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  margin: 0 0 24px;
+  color: var(--text);
+}
+
+.home-hero-title em {
+  font-style: italic;
+  color: var(--stone);
+}
+
+.home-hero-lead {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0 0 36px;
+  max-width: 440px;
+}
+
+.home-hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-hero-visual {
+  position: relative;
+}
+
+/* ---- Expertises band ---- */
+
+.home-expertises {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  padding: 24px 0;
+}
+
+.home-expertises-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.home-exp-label {
+  flex-shrink: 0;
+}
+
+.home-exp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.home-exp-list li {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 4px 16px;
+  border-left: 1px solid var(--line);
+}
+
+.home-exp-list li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+/* ---- Projets featured ---- */
+
+.home-projets {
+  background: var(--bg);
+}
+
+.home-projets-header {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.home-projets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+
+.home-projet-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-decoration: none;
+  group: true;
+}
+
+.home-projet-card--large {
+  grid-row: 1 / 3;
+}
+
+.home-projet-img {
+  transition: opacity 0.25s ease;
+}
+
+.home-projet-card:hover .home-projet-img {
+  opacity: 0.85;
+}
+
+.home-projet-info {
+  padding: 16px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-projet-cat {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.home-projet-titre {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+  transition: color 0.15s ease;
+}
+
+.home-projet-card:hover .home-projet-titre {
+  color: var(--stone);
+}
+
+.home-projet-meta {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* ---- Agence teaser ---- */
+
+.home-agence {
+  background: var(--surface);
+  padding: 96px 0;
+  border-top: 1px solid var(--line);
+}
+
+.home-agence-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ---- CTA ---- */
+
+.home-cta {
+  background: var(--accent);
+  padding: 80px 0;
+}
+
+.home-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.home-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+  margin: 0;
+}
+
+.home-cta-sub {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 8px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 900px) {
+  .home-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-hero-visual { order: -1; }
+  .home-hero-img { height: 300px !important; }
+
+  .home-projets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-projet-card--large { grid-row: auto; }
+
+  .home-projets-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .home-agence-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-agence-img { height: 280px !important; }
+}
+
+@media (max-width: 600px) {
+  .home-expertises-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .home-exp-list { flex-direction: column; gap: 8px; }
+  .home-exp-list li { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 8px; }
+  .home-exp-list li:first-child { border-top: none; padding-top: 0; }
+}

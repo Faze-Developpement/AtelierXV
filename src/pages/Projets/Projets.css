@@ -1,0 +1,139 @@
+/* ---- Page header ---- */
+
+.page-header {
+  border-bottom: 1px solid var(--line);
+  padding: 64px 0 48px;
+  background: var(--bg);
+}
+
+.page-header .eyebrow {
+  margin-bottom: 12px;
+}
+
+/* ---- Filtres ---- */
+
+.projets-section {
+  background: var(--bg);
+}
+
+.projets-filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.filtre-btn {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filtre-btn:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.filtre-btn.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+/* ---- Grille ---- */
+
+.projets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+}
+
+.projet-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.projet-card-img {
+  height: 260px;
+  transition: opacity 0.25s ease;
+}
+
+.projet-card:hover .projet-card-img {
+  opacity: 0.8;
+}
+
+.projet-card-info {
+  padding: 16px 0 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.projet-card-cat {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.projet-card-titre {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+  transition: color 0.15s ease;
+  line-height: 1.2;
+}
+
+.projet-card:hover .projet-card-titre {
+  color: var(--stone);
+}
+
+.projet-card-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 4px 0 0;
+}
+
+.projet-card-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.projet-card-meta span {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.projet-card-meta span + span::before {
+  content: "·";
+  margin-right: 12px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 900px) {
+  .projets-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .projets-grid { grid-template-columns: 1fr; }
+}
